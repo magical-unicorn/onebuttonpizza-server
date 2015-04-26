@@ -31,7 +31,7 @@
         $call = $client->account->calls->create(
             $phonenumber, // The number of the phone initiating the call
             $params->pizzeria_phone, // The number of the phone receiving call
-            'http://obp.sous-anneau.org/step1.php?name='.urlencode($params->customer_name).'&phone='.urlencode($params->customer_phone).'&address='.urlencode($params->customer_address).'&pizza='.urlencode($params->pizza), // The URL Twilio will request when the call is answered
+            'http://obp.sous-anneau.org/step1.php?name='.urlencode($params->customer_name).'&phone='.urlencode($params->customer_phone).'&address='.urlencode($params->customer_address).'&pizza='.urlencode($params->pizza).'&nr='.urlencode($params->nr_pizzas), // The URL Twilio will request when the call is answered
 	    array(
 		"StatusCallback" => "http://obp.sous-anneau.org/error.php"	
 	   )
